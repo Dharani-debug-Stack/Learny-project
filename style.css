@@ -276,6 +276,7 @@ background-color: #c6aad9;
  .trending_sub_container{
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
     }
             
     .sub_con_one{

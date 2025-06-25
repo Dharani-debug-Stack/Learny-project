@@ -16,6 +16,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     position: sticky;
     top: 0;
@@ -105,6 +106,12 @@ body {
     position: relative;
     cursor: pointer;
 }
+.navbar_s5{
+    display: none;
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+}
 
 /* card-popup */
 .navbar_card__popup{
@@ -141,15 +148,12 @@ body {
 }
 
 .overlay_box {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    background-color: white;
-    padding: 2%;
-    width: 40%;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    z-index: 10;
+   width: 35%;
+   border-radius: solid black 2px;
+   background-color: white;
+   position: absolute;
+   top:10%;
+   left: 10%;
     animation-name: zoom;
     animation-duration: 2s;
     animation-fill-mode: forwards;
@@ -205,12 +209,26 @@ body {
     align-items: center;
     justify-content: space-around;
 }
+.content{
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
 
 .content_img {
+     flex-grow: 1;
+    flex-basis: 25%;
+    margin: 5px;
     padding: 20px;
     align-items: center;
+    justify-content: center;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.content-img img{
+    width: 100%;
+    height: 50%;
 }
 
 .content_desc {
@@ -297,6 +315,15 @@ margin-bottom: 20px;
     flex-wrap: wrap;
     justify-content: space-around;
     background-color: aliceblue;
+}
+.card_one{
+    flex-grow: 1;
+    width: 25%;
+    margin: 5px;
+}
+.card_one img{
+    height: 50%;
+    width: 100%;
 }
 .card_one img,h3,p,button{
     margin-top: 5px;
@@ -407,3 +434,34 @@ font-style: italic;
         background-color: blue;
         color: white;
     }
+/* media query */
+@media  screen and (max-width:800px) {
+    body{
+        font-size: 10px;
+    }
+    
+}
+
+@media  screen and (max-width:500px)
+{
+    .card_one {
+        flex-basis: 25%;
+    }
+    .recommendation{
+        display: none;
+    }
+    .content_img{
+        flex-basis: 10%;
+    }
+    .navbar_s1__desc,.navbar_s3,.navbar_s4{
+    display: none;
+    }
+    .navbar_s5{
+    display: block;
+    }
+   .overlay_box{
+    width: 60%;
+    left: 0%;
+    top: 0%;
+   }
+}

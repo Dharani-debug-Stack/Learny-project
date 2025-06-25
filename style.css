@@ -21,8 +21,7 @@ body {
     position: sticky;
     top: 0;
     background-color: white;
-    z-index: 2;
-    width: 100%;
+    z-index: 3;
 }
 
 .navbar_s1__title span {
@@ -131,33 +130,31 @@ body {
 }
 
 /* Sale image */
-.container {
+.container{
     position: relative;
+}
+.container img{
+   
     z-index: 1;
-    width: 80%;
-    display: flex;
-  margin-left: 9%;
+    width: 100%;
    
 }
 
-.main_img {
-    display: block;
-    margin-top: 1%;
-    
-    width: 100%;
-}
-
 .overlay_box {
-   width: 35%;
+   width: 25%;
    border-radius: solid black 2px;
    background-color: white;
    position: absolute;
+   border-radius: 10px;
+   padding: 2px;
    top:10%;
    left: 10%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     animation-name: zoom;
     animation-duration: 2s;
     animation-fill-mode: forwards;
     opacity: 0;
+    z-index: 2;
 }
 @keyframes zoom{
     0%{
@@ -170,42 +167,20 @@ body {
     }
 }
 
-.overlay_box button {
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 5px;
-    padding-right: 10px;
-    padding-top: 5px;
-    color: white;
-    background-color: #a435f0;
-    border-radius: 5px;
-    border: none;
-}
-
-.overlay_box button:hover {
-    background-color: #c6aad9;
-    color: #a435f0;
-
-}
-
 /* Career */
 .career {
     margin-left: 5%;
+    margin-right: 5%;
     margin-top: 3%;
-}
-
-.content img {
-    
-    border-radius: 10px;
-    padding: 10px;
 }
 
 .content {
 
     margin-top: 3%;
     display: flex;
-    flex-grow: 1;
-    flex-basis: 25%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -213,9 +188,9 @@ body {
 }
 
 .content_img {
-     flex-grow: 1;
     align-items: center;
     justify-content: center;
+    padding: 3px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
@@ -441,16 +416,19 @@ font-style: italic;
     }
     .content_img{
         flex-basis: 10%;
+        margin-bottom: 10px;
     }
-    .navbar_s1__desc,.navbar_s3,.navbar_s4{
+    .navbar_s1__desc,.navbar_s3,.navbar_s4,.navbar_s2{
     display: none;
     }
     .navbar_s5{
     display: block;
     }
-   .overlay_box{
-    width: 60%;
-    left: 0%;
-    top: 0%;
-   }
+.overlay_box{
+    width: 50%;
+}
+.career_card{
+    display: none;
+}
+
 }

@@ -186,6 +186,9 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.content_img img{
+    border-radius:20px
+}
 
 .content_img {
     align-items: center;

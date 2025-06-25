@@ -21,6 +21,7 @@ body {
     top: 0;
     background-color: white;
     z-index: 2;
+    width: 100%;
 }
 
 .navbar_s1__title span {
@@ -126,24 +127,43 @@ body {
 .container {
     position: relative;
     z-index: 1;
+    width: 80%;
+    display: flex;
+  margin-left: 9%;
+   
 }
 
 .main_img {
     display: block;
-    margin-top: 5px;
-    margin-left: 6%;
+    margin-top: 1%;
+    
+    width: 100%;
 }
 
 .overlay_box {
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 10%;
     background-color: white;
-    padding: 30px;
-    max-width: 300px;
+    padding: 2%;
+    width: 40%;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     z-index: 10;
+    animation-name: zoom;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes zoom{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .overlay_box button {
@@ -248,12 +268,14 @@ margin-bottom: 20px;
     background-color: rgb(160, 160, 170);
     padding: 15px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 .recommendation_title span{
     color: gray;
     font-size: medium;
 }
 .recommendation_title h3:hover,.recommendation_title span:hover{
+    transition: 1s;
     background-color:rgb(37,33,33);
     color: whitesmoke;
 }
